@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Sugo Pro Display';
+  src: local('Sugo') url('./assets/fonts/SugoProDisplay-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sugo Pro Display';
+  src: local('Sugo') url('./assets/fonts/SugoProDisplay-Bold.woff')
+    format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sugo Pro Display';
+  src: local('Sugo') url('./assets/fonts/0_SugoProClassic-BoldItalic.woff')
+    format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+h1 {
+  font-family: 'Sugo Pro Display';
+
+  font-weight: normal;
+}
+h2 {
+  font-family: 'Sugo Pro Display';
+
+  font-weight: normal;
+}
+p {
+  font-family: 'Sugo Pro Display';
+
+  font-weight: bold;
+  font-style: italic;
+}
