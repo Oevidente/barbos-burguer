@@ -1,3 +1,26 @@
+:root {
+  --heading-size: 96px;
+  --cardapio-titulo-size: 32px;
+  --cardapio-subtitulo-size: 24px;
+  --cardapio-texto-size: 20px;
+  --mobile-texto-size: 15px;
+  --texto-desktop-size: 20px;
+  --mobile-heading-size: 58px;
+  --sugo: 'Sugo Pro Display', Helvetica, sans-serif;
+  --haleway: 'Raleway', Helvetica, sans-serif;
+
+  --red-500: #500c03;
+  --red-300: #cb1517;
+  --orange-200: #e88a47;
+  --orange-100: #f5e5d7;
+  --blue-700: #11131c;
+  --search-bg: #cccccc;
+}
+@media (max-width: 900px) {
+  h1 {
+  }
+}
+
 @font-face {
   font-family: 'Sugo Pro Display';
   src: local('Sugo') url('./assets/fonts/SugoProDisplay-Regular.woff')
@@ -16,22 +39,6 @@
   font-family: 'Sugo Pro Display';
   src: local('Sugo') url('./assets/fonts/0_SugoProClassic-BoldItalic.woff')
     format('woff');
-  font-weight: bold;
-  font-style: italic;
-}
-h1 {
-  font-family: 'Sugo Pro Display';
-
-  font-weight: normal;
-}
-h2 {
-  font-family: 'Sugo Pro Display';
-
-  font-weight: normal;
-}
-p {
-  font-family: 'Sugo Pro Display';
-
   font-weight: bold;
   font-style: italic;
 }
