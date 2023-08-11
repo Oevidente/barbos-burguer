@@ -68,7 +68,10 @@ h1 {
   text-align: center;
   color: #ffffff;
 }
-
+.links-menu a:hover {
+  text-shadow: 1px 2px 0px var(--red-500);
+  text-decoration: underline;
+}
 .pesquisa-container {
   position: absolute;
   display: flex;
