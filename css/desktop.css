@@ -155,6 +155,7 @@ h1 {
   border-radius: 0px 0px 0px 8px;
   transition: 0.6s ease-in-out;
   opacity: 0;
+  text-shadow: 1px 2px 0px var(--red-500);
   padding: 16px 25px;
 }
 .produtos.show {
@@ -163,6 +164,34 @@ h1 {
   height: 300px;
   padding: 16px 25px;
 }
+.produtos .simples,
+.produtos .duplos,
+.produtos .nobres {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.produtos.show .simples {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.produtos.show .duplos {
+  animation: fadeIn 0.3s ease-in-out 0.2s forwards;
+}
+
+.produtos.show .nobres {
+  animation: fadeIn 0.3s ease-in-out 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .burguers {
   display: flex;
   flex-direction: row;
