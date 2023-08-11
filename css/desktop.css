@@ -3,6 +3,7 @@
 /* Desktop */
 body {
   /* background: var(--red-300); */
+  width: 100vw;
 }
 h1 {
   font-family: var(--sugo);
@@ -12,22 +13,27 @@ h1 {
   text-transform: uppercase;
 }
 .nav {
-  display: flex;
+  display: block;
+  position: absolute;
   flex-direction: row;
-  max-width: 1585px;
+  width: 1251px;
+  /* width: 1085px; */
   height: 58px;
-  margin-left: 335px;
-  margin-top: 100px;
+  top: 100px;
+  left: 335px;
+  right: 0;
   /* padding: 16px 25px; */
   border-radius: 8px 0px 0px 8px;
   align-items: flex-start;
   justify-content: center;
-  /* background: var(--red-300); */
   background-image: url('../assets/img/nav-bg.png');
   background-repeat: no-repeat;
-  background-size: 62% auto;
+  background-size: 90% auto;
 }
 .logo {
+  position: absolute;
+  left: 35px;
+  top: 9px;
   background: url('../assets/svg/Logo 2023 branca.svg');
   margin: auto;
   height: 40px;
@@ -37,45 +43,40 @@ h1 {
   background-repeat: no-repeat;
 }
 .menu-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 1013px;
-  /* background: var(--red-300); */
-  width: 793px;
+  width: 793px !important;
   height: 58px;
-  gap: 17px;
-  border-radius: 8px 0px 0px 8px;
+  left: 220px;
+  justify-content: center; //ajusta verticalmente no centro
+  align-items: space-between !important;
+  /* gap: 17px; */
+  /* border-radius: 8px 0px 0px 8px; */
 }
-.menu-links {
-  position: relative;
-  /* background: var(--red-300); */
+.links-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: space-between;
-  padding: 0px 30px;
-  gap: 1px;
 }
-
-.links-menu * {
+.links-menu a {
+  display: block !important;
+  flex: 1;
   text-decoration: none;
   font-family: var(--sugo);
   font-size: 28px;
   text-align: center;
   color: #ffffff;
-  margin: 0 1vw;
 }
 
 .pesquisa-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px 16px;
   gap: 10px;
-
+  right: 0px;
   width: 238px;
   height: 58px;
   /* position: absolute;
@@ -104,20 +105,22 @@ h1 {
   color: var(--red-300);
 }
 .cardapio {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  gap: 10px;
+  width: 143px;
+  height: 58px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  width: 143px;
-  height: 58px;
-  /* padding: 16px 25px; */
   flex-shrink: 0;
   background: var(--red-300);
   color: var(--orange-100);
-  margin-left: 241px;
   font-family: var(--sugo);
   border-radius: 8px 0px 0px 8px;
+  /* padding: 16px 25px; */
 }
 
 .cardapio h2 {
@@ -212,8 +215,9 @@ h1 {
   margin: 0;
 }
 .sobre {
-  margin-left: 345px;
-  margin-top: 120px;
+  position: absolute;
+  left: 345px;
+  top: 278px;
   display: inline-flex;
   padding: 24px 48px;
   flex-direction: column;
