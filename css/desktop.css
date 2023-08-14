@@ -3,6 +3,8 @@
 /* Desktop */
 body {
   /* background: var(--red-300); */
+  width: 100vw;
+  overflow: hidden;
 }
 h1 {
   font-family: var(--sugo);
@@ -12,22 +14,27 @@ h1 {
   text-transform: uppercase;
 }
 .nav {
-  display: flex;
+  display: block;
+  position: absolute;
   flex-direction: row;
-  max-width: 1585px;
+  width: 1251px;
+  /* width: 1085px; */
   height: 58px;
-  margin-left: 335px;
-  margin-top: 100px;
+  top: 100px;
+  left: 335px;
+  right: 0;
   /* padding: 16px 25px; */
   border-radius: 8px 0px 0px 8px;
   align-items: flex-start;
   justify-content: center;
-  /* background: var(--red-300); */
   background-image: url('../assets/img/nav-bg.png');
   background-repeat: no-repeat;
-  background-size: 62% auto;
+  background-size: 90% auto;
 }
 .logo {
+  position: absolute;
+  left: 35px;
+  top: 9px;
   background: url('../assets/svg/Logo 2023 branca.svg');
   margin: auto;
   height: 40px;
@@ -37,45 +44,43 @@ h1 {
   background-repeat: no-repeat;
 }
 .menu-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 1013px;
-  /* background: var(--red-300); */
-  width: 793px;
+  width: 793px !important;
   height: 58px;
-  gap: 17px;
-  border-radius: 8px 0px 0px 8px;
+  left: 220px;
+  justify-content: center; //ajusta verticalmente no centro
+  align-items: space-between !important;
+  /* gap: 17px; */
+  /* border-radius: 8px 0px 0px 8px; */
 }
-.menu-links {
-  position: relative;
-  /* background: var(--red-300); */
+.links-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: space-between;
-  padding: 0px 30px;
-  gap: 1px;
 }
-
-.links-menu * {
+.links-menu a {
+  display: block !important;
+  flex: 1;
   text-decoration: none;
   font-family: var(--sugo);
   font-size: 28px;
   text-align: center;
   color: #ffffff;
-  margin: 0 1vw;
 }
-
+.links-menu a:hover {
+  text-shadow: 1px 2px 0px var(--red-500);
+  text-decoration: underline;
+}
 .pesquisa-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px 16px;
   gap: 10px;
-
+  right: 0px;
   width: 238px;
   height: 58px;
   /* position: absolute;
@@ -104,92 +109,93 @@ h1 {
   color: var(--red-300);
 }
 .cardapio {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  /* gap: 10px; */
+  width: 93px;
+  height: 26px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 143px;
-  height: 58px;
-  /* padding: 16px 25px; */
-  flex-shrink: 0;
+  align-items: flex-start;
   background: var(--red-300);
   color: var(--orange-100);
-  margin-left: 241px;
   font-family: var(--sugo);
   border-radius: 8px 0px 0px 8px;
+  padding: 16px 25px;
+  transition: all 0.6s ease-in-out;
 }
 
 .cardapio h2 {
-  font-size: var(--cardapio-titulo-size);
-}
-.cardapio p,
-.cardapio h3 {
-  display: none;
-  transition: 0.6s ease-in-out;
-}
-.cardapio .produtos {
-  display: none;
-}
-.simples,
-.duplos,
-.nobres {
-  opacity: 0;
-  transition: opacity 1.6s;
-}
-.blur {
-  backdrop-filter: blur(10px);
-}
-.hard-shadow {
-  text-shadow: 1px 2px 0px var(--red-500);
-}
-.inner-shadow {
-  box-shadow: inset 0px 0px 8px var(--red-500);
-}
-.cardapio:hover {
-  transition: 0.6s ease-in-out;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 25px;
-  gap: 10px;
-  width: 276px;
-  height: 410px;
-  border-radius: 8px 0px 0px 8px;
-  margin-left: 58px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  font-size: var(--cardapio-titulo-size);
+  margin: 0;
+  transition: all 0.6s ease-in-out;
 }
 
-.cardapio:hover .produtos {
-  max-height: 378px !important;
+.produtos h3,
+.produtos p {
+  display: flex;
+  margin: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.produtos {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  width: 93px;
+  height: 0px;
+  background: var(--red-300);
+  color: var(--orange-100);
+  font-family: var(--sugo);
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   display: flex;
   margin: auto;
-}
-.cardapio:hover .simples,
-.cardapio:hover .duplos,
-.cardapio:hover .nobres {
-  opacity: 1;
-}
-.cardapio:hover h2 {
-  display: flex;
-  align-items: center;
-  text-align: center;
+  border-radius: 0px 0px 0px 8px;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
   text-shadow: 1px 2px 0px var(--red-500);
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin-top: 9px;
-  margin-bottom: 0;
-  margin-left: 25px;
+  padding: 16px 25px;
+}
+.produtos.show {
+  opacity: 1;
+  width: 226px;
+  height: 300px;
+  padding: 16px 25px;
+}
+.produtos .simples,
+.produtos .duplos,
+.produtos .nobres {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.cardapio:hover .burguers {
+.produtos.show .simples {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.produtos.show .duplos {
+  animation: fadeIn 0.3s ease-in-out 0.2s forwards;
+}
+
+.produtos.show .nobres {
+  animation: fadeIn 0.3s ease-in-out 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.burguers {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -206,18 +212,39 @@ h1 {
   order: 2;
   flex-grow: 0;
 }
-.cardapio:hover h3,
-.cardapio:hover p {
-  display: flex;
-  margin: 0;
+
+.blur {
+  backdrop-filter: blur(10px);
 }
+.hard-shadow {
+  text-shadow: 1px 2px 0px var(--red-500);
+}
+.inner-shadow {
+  box-shadow: inset 0px 0px 8px var(--red-500);
+}
+.cardapio:hover {
+  position: absolute;
+  right: 0;
+  align-items: flex-start;
+  padding: 16px 25px;
+  width: 226px;
+  height: 26px;
+  border-radius: 8px 0px 0px 0px;
+}
+
+.cardapio:hover h2 {
+  text-shadow: 1px 2px 0px var(--red-500);
+}
+
 .sobre {
-  margin-left: 345px;
-  margin-top: 120px;
+  position: absolute;
+  min-height: 360px;
+  left: 345px;
+  top: 278px;
   display: inline-flex;
   padding: 24px 48px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 6px;
   border-radius: 22px;
@@ -229,17 +256,23 @@ h1 {
 }
 .sobre h1 {
   margin: 0;
+  display: flex;
+  width: 547px;
+  height: 67px;
+  flex-direction: column;
+  justify-content: center;
 }
 .barra {
   width: 547px;
   height: 4px;
   border-radius: 2px;
   background: #fff;
+  /* margin: 6px 0; */
 }
 .sobreTxt {
   display: flex;
   width: 547px;
-  height: 229px;
+  height: 233px;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
@@ -247,13 +280,108 @@ h1 {
   text-align: justify;
   text-overflow: ellipsis;
   whitespace: nowrap;
-
+  margin: 0;
   /* texto-corrido */
   font-family: var(--haleway);
   font-size: var(--texto-desktop-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.promos {
+  position: absolute;
+  height: 360px !important;
+  width: 547px;
+  left: 345px;
+  top: 278px;
+  display: inline-flex;
+  padding: 24px 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 22px;
+  background: rgba(200, 0, 10, 0.7);
+
+  /* blur */
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.promos h1 {
+  margin: 0;
+  padding-top: 7px;
+  display: flex;
+  width: 547px;
+  height: 67px;
+  text-align: center;
+  letter-spacing: 1.4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.promos .barra {
+  margin-top: -7px;
+}
+.promosTxt {
+  display: flex;
+  width: 547px;
+  height: 233px;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: justify;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  margin: 0;
+  transform: translateY(-7px);
+  /* texto-corrido */
+  font-family: var(--haleway);
+  font-size: var(--texto-desktop-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.promosLista {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.promosLista .comboLista {
+  display: flex;
+  flex-direction: column;
+  height: 233px !important;
+  width: 453px;
+  transform: translateX(-21px);
+  justify-content: space-between;
+}
+.promosLista .valores {
+  transform: translateY(-3px);
+  height: 233px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: var(--sugo);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  list-style: none !important;
 }
 .fundo {
   background-image: url('../assets/img/DALL·E 2023-03-12 15.13.52 - background dark.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -99;
+}
+.fundo2 {
+  background-image: url('../assets/img/Background of a burguer shop website.jpg');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
