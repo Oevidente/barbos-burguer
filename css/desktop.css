@@ -236,7 +236,7 @@ h1 {
   text-shadow: 1px 2px 0px var(--red-500);
 }
 
-.sobre {
+.home {
   position: absolute;
   min-height: 360px;
   left: 345px;
@@ -254,7 +254,7 @@ h1 {
   backdrop-filter: blur(10px);
   color: #fff;
 }
-.sobre h1 {
+.home h1 {
   margin: 0;
   display: flex;
   width: 547px;
@@ -269,7 +269,7 @@ h1 {
   background: #fff;
   /* margin: 6px 0; */
 }
-.sobreTxt {
+.homeTxt {
   display: flex;
   width: 547px;
   height: 233px;
@@ -367,6 +367,143 @@ h1 {
   font-weight: 500;
   line-height: normal;
   list-style: none !important;
+}
+.localizacoes {
+  position: absolute;
+  height: 492px !important;
+  width: 547px;
+  left: 345px;
+  top: 278px;
+  display: inline-flex;
+  padding: 24px 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 22px;
+  background: rgba(200, 0, 10, 0.7);
+
+  /* blur */
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.localizacoes h1 {
+  margin: 0;
+  display: flex;
+  width: 547px;
+  height: 67px;
+  text-align: center;
+  letter-spacing: 4.4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.localizacoes iframe {
+  border-radius: 8px;
+  border: inset 2px solid #dadce0;
+}
+.contatos {
+  position: absolute;
+  min-height: 359px;
+  width: 547px;
+  left: 345px;
+  top: 278px;
+  display: inline-flex;
+  padding: 24px 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 22px;
+  background: rgba(200, 0, 10, 0.7);
+
+  /* blur */
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.contatos h1 {
+  margin: 0;
+  display: flex;
+  width: 547px;
+  height: 67px;
+  font-size: 80px;
+  letter-spacing: 0.5px;
+  flex-direction: column;
+  justify-content: center;
+}
+.contatosTxt {
+  display: flex;
+  width: 547px;
+  height: 276px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #fff;
+  text-align: justify;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  margin: 0;
+  /* texto-corrido */
+  font-family: var(--haleway);
+  font-size: var(--texto-desktop-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contatosTxt p,
+.contatosTxt li {
+  margin: 0;
+}
+.contatosTxt ul {
+  justify-content: space-between;
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+.sobre {
+  position: absolute;
+  min-height: 658px;
+  width: 547px;
+  left: 345px;
+  top: 278px;
+  display: inline-flex;
+  padding: 24px 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 22px;
+  background: rgba(200, 0, 10, 0.7);
+
+  /* blur */
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.sobre h1 {
+  margin: 0;
+  display: flex;
+  width: 547px;
+  height: 67px;
+  letter-spacing: 1.5px;
+  flex-direction: column;
+  justify-content: center;
+}
+.sobreTxt {
+  display: flex;
+  width: 547px;
+  height: 574px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #fff;
+  text-align: justify;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  margin: 0 !important;
+  /* texto-corrido */
+  font-family: var(--haleway);
+  font-size: var(--texto-desktop-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.sobre p {
+  margin: 0;
 }
 .fundo {
   background-image: url('../assets/img/DALL·E 2023-03-12 15.13.52 - background dark.png');
